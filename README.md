@@ -1,16 +1,187 @@
-# React + Vite
+# 🚀 DevPilot – AI Developer Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DevPilot is an intelligent developer assistant that helps generate code, review tasks, and accelerate development workflows through a clean UI and AI-powered backend.  
+This project is built for the **WeMakeDevs – AI Assemble Hackathon 2025** and integrates **Vercel**, **Render**, and **CodeRabbit**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## React Compiler
+- 🧠 **AI Task Execution**
+  - Generate code (React components, APIs, utilities, etc.)
+  - Fix bugs or rewrite existing code
+  - Provide explanations or step-by-step solutions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚡ **Fast Frontend UI (Vercel)**
+  - Built using React + Vite + TailwindCSS  
+  - Clean, responsive, developer-friendly layout
 
-## Expanding the ESLint configuration
+- 🔗 **Backend with Vercel AI SDK (Render)**
+  - Uses Vercel AI SDK + Groq models  
+  - Securely processes tasks and returns AI-generated output
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🤖 **CodeRabbit Integration**
+  - Automated PR reviews  
+  - Improves documentation & code quality  
+  - Required for the **Captain Code Award**
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend**
+- React + Vite  
+- Tailwind CSS  
+- Vercel (Deployment)
+
+### **Backend**
+- Node.js + Express  
+- Vercel AI SDK  
+- Groq Model (`llama3-70b-8192`)  
+- Render (Deployment)
+
+### **Tools**
+- GitHub  
+- CodeRabbit (Automated PR reviews)
+
+---
+
+## 🧩 Architecture Overview
+   ┌───────────────────────┐
+   │  React Frontend (UI)  │
+   │     Vercel Hosting    │
+   └───────────┬───────────┘
+               │ POST /run-task
+               ▼
+   ┌──────────────────────────┐
+   │   Express Backend API    │
+   │      Render Hosting      │
+   └───────────┬─────────────┘
+               │ AI Prompt
+               ▼
+   ┌───────────────────────────┐
+   │ Vercel AI SDK + Groq AI   │
+   │ Model: llama3-70b-8192    │
+   └───────────────────────────┘
+
+---
+
+# 🔧 Installation & Setup
+
+Follow these steps to run the project locally.
+
+---
+
+## 📦 1. Frontend Setup
+
+``bash
+git clone https://github.com/sohumseth703/devpilot-frontend
+cd devpilot-frontend
+npm install
+npm run dev
+
+---
+
+📦 2. Backend Setup
+git clone https://github.com/sohumseth703/devpilot-backend
+cd devpilot-backend
+npm install
+Create a .env file:
+
+OPENAI_API_KEY=your-groq-api-key
+
+
+Run backend:
+
+node server.js
+
+---
+
+🌐 Deployment Links
+Frontend (Vercel)
+
+🔗 https://devpilot-frontend.vercel.app/
+
+Backend (Render)
+
+🔗 https://devpilot-backend-5o33.onrender.com/
+
+---
+
+🧪 How to Use DevPilot
+
+Open the frontend URL.
+
+Enter a task such as:
+
+“Generate a React login page”
+
+“Fix this JavaScript bug”
+
+“Explain this function”
+
+Click Run Task
+
+Frontend sends request to backend
+
+Backend uses Vercel AI SDK + Groq
+
+Output appears in the terminal-style box
+
+🏆 Sponsor Technology Usage (Hackathon Requirement)
+✔️ Vercel
+
+Frontend deployed
+
+Backend uses Vercel AI SDK
+
+✔️ CodeRabbit
+
+GitHub App installed
+
+Automated PR reviews enabled
+
+✔️ Render
+
+Backend deployed with auto-deploy
+
+🎥 Demo Video (Required)
+
+A 2-minute demo video will be added before final submission, including:
+
+UI walkthrough
+
+Backend workflow
+
+Example task
+
+Sponsor usage demonstration
+
+🚀 Future Improvements
+
+Multi-file code generation
+
+User authentication
+
+Save task history
+
+Download generated files
+
+Dark/Light theme toggle
+
+❤️ Acknowledgements
+
+WeMakeDevs
+
+Vercel
+
+CodeRabbit
+
+Groq
+
+Open Source Community
+
+📄 License
+This project is open-source and distributed under the MIT License.
+
+This project is open-source and distributed under the MIT License.
