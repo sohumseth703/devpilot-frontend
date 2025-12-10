@@ -47,6 +47,7 @@ This project is built for the **WeMakeDevs – AI Assemble Hackathon 2025** and 
 ---
 
 ## 🧩 Architecture Overview
+```text
    
 ---
 
@@ -69,6 +70,9 @@ This project is built for the **WeMakeDevs – AI Assemble Hackathon 2025** and 
    └───────────────────────────┘
 
 ---
+
+---
+```
 
 # 🔧 Installation & Setup
 
