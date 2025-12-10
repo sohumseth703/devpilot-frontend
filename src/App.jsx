@@ -15,13 +15,16 @@ function App() {
     setResult("Connecting to backend...");
 
     try {
-      const response = await fetch("http://localhost:5000/run-task", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ task }),
-      });
+      const response = await fetch(
+        "https://devpilot-backend-5o33.onrender.com/run-task",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ task }),
+        }
+      );
 
       const data = await response.json();
 
@@ -32,8 +35,7 @@ function App() {
       }
     } catch (error) {
       setResult(
-        "❌ Cannot connect to backend. Is the server running?\n\n" +
-          error.message
+        "❌ Cannot connect to backend.\n\nError: " + error.message
       );
     }
 
@@ -42,10 +44,14 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center pt-16 px-4">
-      <h1 className="text-4xl font-bold mb-6">DevPilot – AI Developer Assistant</h1>
+      <h1 className="text-4xl font-bold mb-6">
+        DevPilot – AI Developer Assistant
+      </h1>
 
       <div className="w-full max-w-2xl bg-gray-800 p-6 rounded-xl shadow-lg">
-        <label className="block text-lg font-semibold mb-2">Enter your task:</label>
+        <label className="block text-lg font-semibold mb-2">
+          Enter your task:
+        </label>
 
         <input
           type="text"
